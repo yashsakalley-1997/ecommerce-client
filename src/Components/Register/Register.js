@@ -105,7 +105,9 @@ const Register = ()=>{
                 alt="Ecommerce background"
             ></img>    
         </div>
-        <form onSubmit={(e)=>e.preventDefault()} className={`bg-slate-900 p-7 rounded-lg bg-opacity-50 absolute w-full md:w-${isSignInForm?`1/4`:`1/2`} my-32 mx-auto right-0 left-0 text-white`}>
+        <form style={{
+          width:(isSignInForm?"25%":"50%")
+        }} onSubmit={(e)=>e.preventDefault()} className={`bg-slate-900 p-7 rounded-lg bg-opacity-50 absolute w-full md: my-32 mx-auto right-0 left-0 text-white`}>
             <h1 className="font-bold py-4 text-3xl">{isSignInForm?"Sign In":"Sign Up"}</h1>
             <div className={isSignInForm?"w-full":"flex gap-2"}>
               <input 
@@ -171,7 +173,7 @@ const Register = ()=>{
                     </>
                 )
             }
-            <button onClick={()=>onFormSubmit()} disabled={loading} className={`bg-red-${loading?"400":"900"} rounded-md w-${isSignInForm?`full`:`1/2`} p-4 my-6`}>{isSignInForm?`Sign In`:`Sign Up`}</button>
+            <button onClick={()=>onFormSubmit()} disabled={loading} className={`bg-blue-${loading?"400":"900"} rounded-md w-${isSignInForm?`full`:`1/2`} p-4 my-6`}>{isSignInForm?`Sign In`:`Sign Up`}</button>
             {error && <div className="text-red-500 text-lg py-4">{error}</div>}
             <p className="cursor-pointer" onClick={()=>toggleForm(!isSignInForm)}>
                 {!isSignInForm?"Already Registered? Sign In Now.":"New? Sign Up Now."}

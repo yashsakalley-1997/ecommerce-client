@@ -38,7 +38,7 @@ const ListCard = ({data}) => {
                 <span className="text-white">{qty}</span>
                 <button onClick={()=>setQuantity(1)} className="bg-slate-700 text-white py-3 px-2 mx-3 rounded-md">+</button>
             </div>
-            <button onClick={()=>addCart()} disabled={loading} className={`bg-violet-${loading?"500":"900"} text-white my-3 py-3 px-2 w-1/2 rounded-md`}>Add to Cart</button>
+            <button onClick={()=>addCart()} disabled={loading} className={`bg-blue-${loading?"500":"900"} text-white my-3 py-3 px-2 w-1/2 rounded-md`}>Add to Cart</button>
             .
         </div>
     )

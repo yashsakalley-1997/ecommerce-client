@@ -61,7 +61,7 @@ const AddInventory = () =>{
               />
               
               </div>
-              <button onClick={()=>onFormSubmit()} disabled={loading} className={`bg-red-${loading?"400":"900"} rounded-md w-full} p-4 my-6`}>Add Product</button>
+              <button onClick={()=>onFormSubmit()} disabled={loading} className={`bg-blue-${loading?"400":"900"} rounded-md w-full} p-4 my-6`}>Add Product</button>
             {error && <div className="text-red-500 text-lg py-4">{error}</div>}
               </form>
         </div>
