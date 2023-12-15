@@ -13,8 +13,8 @@ const AddInventory = () =>{
     const imageLink = useRef(null);
 
     const onFormSubmit = ()=>{
-        setLoading(true)
-        let error = validateProducts(productName.current.value,productPrice.current.value,imageLink.current.value)
+        let error = validateProducts(productName.current.value,productPrice.current.value,imageLink.current.value);
+        setError(error)
         if(!error){
             addProductInventory({
                 name:productName.current.value,price:productPrice.current.value,imageLink:imageLink.current.value
