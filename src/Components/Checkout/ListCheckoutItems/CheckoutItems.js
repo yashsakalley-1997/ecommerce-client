@@ -12,7 +12,7 @@ const CartItems = ({data})=>{
         makeOrder(userId).then((res)=>{
             navigate("/orders")
         }).catch((err)=>{
-            console.log(err)
+            window.alert("Error Ocurred pls try again later")
         })
     }
     return (

@@ -1,6 +1,6 @@
 const validateInput = (isSignInForm,firstName,email,password,contactNumber,address)=>{
     if(!isSignInForm){
-        if(!(/^[a-zA-Z]+$/.test(firstName))){
+        if(!(/^[A-Za-z]+(?:[\s'-][A-Za-z]+)*$/.test(firstName))){
             return "Invalid name entered"
         }
         if(!(/^\+(?:[0-9] ?){6,14}[0-9]$/.test(contactNumber))){

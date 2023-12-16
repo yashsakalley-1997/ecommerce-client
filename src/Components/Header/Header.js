@@ -30,14 +30,15 @@ const Header = () => {
                                                 navigate("/browse")
                                             }
                                             else{
-                                                console.log('heyyy',currentRoute)
                                                 navigate("/checkout")
                                             }
                                         }}
                                         className="bg-blue-900 p-2 rounded-sm text-white">
                                         {currentRoute === "/checkout" || currentRoute === "/orders"?"Browse More Products":"Proceed to Checkout"}
                                     </button>
-                                    <button className="text-white font-semibold">My Orders</button>
+                                    <button onClick={()=>{
+                                        navigate("/orders")
+                                    }} className="text-white font-semibold">My Orders</button>
                                 </>
                             )
                         }

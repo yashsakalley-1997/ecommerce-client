@@ -14,7 +14,9 @@ const Browse = ()=>{
             if(res?.data?.length === 0){
                 setStatus("No data in inventory")
             }
-            setStatus("")
+            else{
+                setStatus("")
+            }
             setItems(res?.data)
         })
         .catch((err)=>{

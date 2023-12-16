@@ -83,7 +83,7 @@ const Register = ()=>{
               }  
             )
             .then((res)=>{
-              console.log(res)
+              window.alert("User Registered Successfully")
             })
             .catch((err)=>{
               setError(`${err.response.data.error}`)
